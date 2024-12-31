@@ -2,7 +2,7 @@ name: wechat_push
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 16 * * *'
+    - cron: '0 15 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest

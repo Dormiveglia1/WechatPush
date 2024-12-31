@@ -1,6 +1,7 @@
 const { params } = require ('./src/config/config');
+const { params1 } = require ('./src/config/config_test');
 const { getToken } = require('./src/getToken');
-const { sendMessage } = require('./src/sendMessage');
+const { sendMessage, sendMessage1 } = require('./src/sendMessage');
 const { getDate, getLoveWords} = require('./src/utils');
 
 function calculateDaysFromNow(targetDate) {
@@ -50,6 +51,28 @@ const start = async () => {
 
     console.log(data);
 
+
+    // sendMessage1({
+    //     access_token,
+    //     ...params1,
+    //     data
+    // })
+    // .then(res => {
+    //     console.log('响应结果:', res.data);
+    //     console.log("Access Token:", access_token);
+    //     console.log("OpenID:", params1.touser1);
+
+    //     if (res.data && res.data.errcode) {
+    //         console.error('发送失败:', res.data.errmsg || '未知错误');
+    //         return;
+    //     }
+    //     console.log('发送成功 - 请在微信查看对应消息');
+    // })
+    // .catch(err => {
+    //     console.error('发送失败，可能的原因:', err.message || err);
+    // });
+    
+
     sendMessage({
         access_token,
         ...params,
@@ -60,6 +83,8 @@ const start = async () => {
             console.log('发送失败');
             return;
         }
+        console.log("Access Token:", access_token);
+        console.log("OpenID:", params.touser);
         console.log('发送成功 - 请在微信查看对应消息')
     })
     .catch(err =>{
