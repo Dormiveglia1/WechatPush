@@ -14,7 +14,7 @@ function calculateDaysFromNow(targetDate) {
     const timeDiff = target - now;
 
     // 将时间差转换为天数，向下取整
-    const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24)) + 2;
+    const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24)) + 1;
 
     return daysDiff;
 }
