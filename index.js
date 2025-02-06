@@ -20,7 +20,7 @@ function calculateDaysFromNow(targetDate) {
 }
 
 
-const birthday = "2025-02-05";
+const birthday = "2026-02-05";
 const love_date = "2024-08-22";
 const days_to_birthday = calculateDaysFromNow(birthday);
 const days_to_love_date = Math.abs(calculateDaysFromNow(love_date));
